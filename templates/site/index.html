@@ -1,0 +1,101 @@
+{% extends 'site/base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Blog{% endblock %}
+{% block meta-description %}
+  <meta name="description" content="{% for post in posts %} {{ post.title }}{% if not forloop.last %}, {% endif %}{% endfor %} - Blog." />
+{% endblock %}
+{% block body_block %}
+    <div class="list-group">
+        <div class="list-group-item">
+            <div class="row-picture">
+                <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+            </div>
+            <div class="row-content">
+                <h4 class="list-group-item-heading">Ilyasov Anton</h4>
+                <p class="list-group-item-text">published 17 d 24 hrs ago</p>
+
+            </div>
+            <div class="list-group-separator"></div>
+        </div>
+
+    </div>
+
+    <div class="blog_post">
+        <h1> Name of blog post</h1>
+        <h2>Heading 1</h2>
+        <h3>
+            Apolloniates, scutum, et uria.Tumultumques prarere, tanquam teres buxum.
+            Sunt torquises anhelare regius, grandis gloses.Nunquam vitare coordinatae.
+            Omnias trabem in noster brema!Est azureus sectam, cesaris.
+            A falsis, abactus flavum adiurator.Eheu, finis!
+        </h3>
+        <h2>Heading 1</h2>
+        <h3>
+            Apolloniates, scutum, et uria.Tumultumques prarere, tanquam teres buxum.
+            Sunt torquises anhelare regius, grandis gloses.Nunquam vitare coordinatae.
+            Omnias trabem in noster brema!Est azureus sectam, cesaris.
+            A falsis, abactus flavum adiurator.Eheu, finis!
+        </h3>
+        <h2>Heading 1</h2>
+        <h3>
+            Apolloniates, scutum, et uria.Tumultumques prarere, tanquam teres buxum.
+            Sunt torquises anhelare regius, grandis gloses.Nunquam vitare coordinatae.
+            Omnias trabem in noster brema!Est azureus sectam, cesaris.
+            A falsis, abactus flavum adiurator.Eheu, finis!
+        </h3>
+        <h2>Heading 1</h2>
+        <h3>
+            Apolloniates, scutum, et uria.Tumultumques prarere, tanquam teres buxum.
+            Sunt torquises anhelare regius, grandis gloses.Nunquam vitare coordinatae.
+            Omnias trabem in noster brema!Est azureus sectam, cesaris.
+            A falsis, abactus flavum adiurator.Eheu, finis!
+        </h3>
+        <h2>Heading 1</h2>
+        <h3>
+            Apolloniates, scutum, et uria.Tumultumques prarere, tanquam teres buxum.
+            Sunt torquises anhelare regius, grandis gloses.Nunquam vitare coordinatae.
+            Omnias trabem in noster brema!Est azureus sectam, cesaris.
+            A falsis, abactus flavum adiurator.Eheu, finis!
+        </h3>
+        <h2>Heading 1</h2>
+
+        <h3>
+            Apolloniates, scutum, et uria.Tumultumques prarere, tanquam teres buxum.
+            Sunt torquises anhelare regius, grandis gloses.Nunquam vitare coordinatae.
+            Omnias trabem in noster brema!Est azureus sectam, cesaris.
+            A falsis, abactus flavum adiurator.Eheu, finis!
+        </h3>
+
+    </div>
+  <ul class ="list-inline">
+   <li><a href="" target="_blank"><i
+            class="fa fa-fw fa-heart btn-blog"></i></a>
+    <li><h4>15 likes</h4></li>
+  </li>
+</ul>
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+         * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+        /*
+         var disqus_config = function () {
+         this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+         this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+         };
+         */
+        (function () {
+            var d = document, s = d.createElement('script');
+
+            s.src = '//antonilblog.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+        powered by Disqus.</a></noscript>
+{% endblock %}

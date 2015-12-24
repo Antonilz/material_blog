@@ -1,0 +1,5 @@
+
+/* hide sidebar sub menus by default */
+#sidebar {
+    position :fixed;
+}

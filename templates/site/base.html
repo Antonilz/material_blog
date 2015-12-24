@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material blog - {% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'dist/css/bootstrap-material-design.css' %}" rel="stylesheet">
+    <link href="{% static 'dist/css/ripples.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/sidebar.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <!-- Dropdown.js -->
+    <link href="//cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+    <script src="{% static 'js/sidebar.js' %}"></script>
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">ANTONIL BLOG</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-inverse-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class="navbar-form">
+                            <div class="form-group ">
+                                <input type="text" class="form-control col-md-8" placeholder="Search Blog">
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="javascript:void(0)">Sign in/Sign up</a></li>
+                    <li class="btn-raised"><a href="javascript:void(0)">Write a story</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="blog_part">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                {% block body_block %}{% endblock %}
+            </div>
+            <div class="col-md-3">
+                <div class="col-md-3" id="leftCol">
+
+                    <ul class="nav nav-stacked" id="sidebar">
+                        <li>
+                            <a href="#sec0">Category 1</a>
+                            <ul class="nav">
+                                <li class=""><a href="#">- Sub 1</a></li>
+                                <li class=""><a href="#">- Sub 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#sec1">Category 2</a>
+                            <ul class="nav">
+                                <li class=""><a href="#sec1a">- Sub 1</a></li>
+                                <li class=""><a href="#sec1b">- Sub 2</a></li>
+                                <li class=""><a href="#sec1c">- Sub 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#sec2">Category 3</a></li>
+                        <li><a href="#sec3">Category 4</a></li>
+                        <li><a href="#sec4">Category 5</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="col-md-3">
+            <h4>Material Design 2015</h4>
+        </div>
+
+        <div class="col-md-3">
+            <ul class="list-inline">
+                <li><h4>Contact:</h4></li>
+                <li><a href="" target="_blank" class="btn-social"><i
+                        class="fa fa-fw fa-envelope"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <ul class="list-inline">
+                <li><h4>Follow:</h4></li>
+                <li><a href="" target="_blank" class="btn-social"><i
+                        class="fa fa-fw fa-github"></i></a></li>
+                <li><a href="" target="_blank" class="btn-social"><i
+                        class="fa fa-fw fa-facebook"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Scripts -->
+<!-- Twitter Bootstrap -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Material Design for Bootstrap -->
+<script src="{% static 'dist/js/material.js' %}"></script>
+<script src="{% static 'dist/js/ripples.min.js' %}"></script>
+<script>
+    $.material.init();
+</script>
+<!-- Sliders -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
+
+<!-- Dropdown.js -->
+<script src="https://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js"></script>
+<script>
+    $("#dropdown-menu select").dropdown();
+</script>
+</body>
+</html>
